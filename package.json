@@ -1,0 +1,25 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "[Codewars](https://www.codewars.com/dashboard)",
+  "main": "index.js",
+  "directories": {
+    "tests-js": "tests"
+  },
+  "scripts": {
+    "test": "mocha 'tests-js/**/*.js' --recursive --timeout 60000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxLZp/codewars-php.git"
+  },
+  "author": "MaxLZp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxLZp/codewars-php/issues"
+  },
+  "homepage": "https://github.com/MaxLZp/codewars-php#readme",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
