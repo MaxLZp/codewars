@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\K7_ConsonantValue;
+namespace tests\K6_ConsonantValue;
 
 class DataProvider
 {
