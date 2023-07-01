@@ -8,7 +8,6 @@ describe('Kyu 6: Equal Sides Of An Array', function () {
     for (let index = 0; index < arr.length; index++) {
       leftSum += arr[index-1] || 0;
       rightSum -= arr[index];
-      console.log(index + ':' + leftSum + '<>' + rightSum);
       if (leftSum === rightSum) { return index; }
     }
     return -1;
