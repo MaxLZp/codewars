@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/MaxLZp/codewars-php#readme",
   "devDependencies": {
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7"
+  },
+  "dependencies": {
   }
 }
