@@ -1,16 +1,19 @@
 var assert = require('assert');
 
-describe('Kyu 7: How many arguments', function () {
+describe('Kyu 7: Deodorant Evaporator', function () {
 
-  function args_count() {
-    return arguments.length;
+  function evaporator(content, evap_per_day, threshold){
+    let rest = 100;
+    let days = 0;
+    while (rest > threshold) {
+      rest *= (100 - evap_per_day) / 100;
+      days++;
+    }
+    return days;
   }
 
   it("Fixed Tests", () => {
-    assert.strictEqual(args_count(1, 2), 2);
-    assert.strictEqual(args_count(), 0);
-    assert.strictEqual(args_count('A', 'B', 'C'), 3);
-    assert.strictEqual(args_count(["foo", "bar"]), 1);
+    assert.equal(evaporator(10,10,10),22);
   });
 
 });
