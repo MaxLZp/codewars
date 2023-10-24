@@ -25,6 +25,6 @@ describe('Kyu 7: Day of the Year', function () {
 		assert.equal(toDayOfYear([31, 12, 2001]), 365);
 		assert.equal(toDayOfYear([31, 12, 2004]), 366);
 		assert.equal(toDayOfYear([31, 12, 2100]), 365);
-		assert.equal(toDayOfYear([1, 3, 1920]), 60);
+		assert.equal(toDayOfYear([1, 3, 1920]), 61);
 	});
 });
