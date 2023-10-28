@@ -12,12 +12,12 @@ class Solution2Test extends TestCase
      * @dataProvider \tests\K6_Erros_Histogram\DataProvider::data
      */
     public function execute($input, $expected) {
-        printf("s: %s\r\n", $input);
+        // printf("s: %s\r\n", $input);
         $actual = $this->solve($input);
-        printf("Actual: %s\r\n", $actual);
-        printf("Expect: %s\r\n", $expected);
+        // printf("Actual: %s\r\n", $actual);
+        // printf("Expect: %s\r\n", $expected);
         $this->assertSame($expected, $actual);
-        printf("%s\r\n", "-");
+        // printf("%s\r\n", "-");
     }
 
     public function solve($s): string
