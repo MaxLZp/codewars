@@ -38,15 +38,15 @@ class Solution1Test extends TestCase
     private function assertFuzzy($s, $expect) {
         // max error
         $merr = 1e-9;
-        printf("s: %s\r\n", $s);
+        // printf("s: %s\r\n", $s);
         $actual = $this->solve($s);
-        printf("Actual: %.9f\r\n", $actual);
-        printf("Expect: %.9f\r\n", $expect);
+        // printf("Actual: %.9f\r\n", $actual);
+        // printf("Expect: %.9f\r\n", $expect);
         $inrange = abs($actual - $expect) <= $merr;
-        if ($inrange === false) {
-            echo "Expected value near: $expect, got: $actual\r\n";
-        }
+        // if ($inrange === false) {
+        //     echo "Expected value near: $expect, got: $actual\r\n";
+        // }
         $this->assertSame(true, $inrange);
-        echo "-----\r\n";
+        // echo "-----\r\n";
     }
 }
