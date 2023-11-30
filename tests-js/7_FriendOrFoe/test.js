@@ -1,0 +1,15 @@
+var assert = require('assert');
+
+describe('Kyu 7: Friend or Foe?', function () {
+  function friend(friends) {
+    return friends.filter(e => e.length == 4);
+  }
+
+  it("Basic test", () => {
+    assert.deepEqual(friend(["Ryan", "Kieran", "Mark"]), ["Ryan", "Mark"])
+    assert.deepEqual(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]), ["Ryan"])
+    assert.deepEqual(friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]), ["Jimm", "Cari", "aret"])
+    assert.deepEqual(friend(["Love", "Your", "Face", "1"]), ["Love", "Your", "Face"])
+  });
+
+});
