@@ -1,3 +1,4 @@
+
 # Factorial
 ## 7 kyu
 

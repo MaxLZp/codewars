@@ -1,5 +1,6 @@
 var assert = require('assert');
 
+
 describe('Kyu 7: Factorial', function () {
 
   function factorial(n) {
@@ -12,6 +13,7 @@ describe('Kyu 7: Factorial', function () {
     assert.equal(factorial(1), 1, "factorial for 1 is 1");
     assert.equal(factorial(2), 2, "factorial for 2 is 2");
     assert.equal(factorial(3), 6, "factorial for 3 is 6");
+
   });
 
 });

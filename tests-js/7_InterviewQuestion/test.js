@@ -1,29 +1,17 @@
 var assert = require('assert');
 
-describe('Kyu 7: Interview Question (easy)', function () {
+describe('Kyu 7: Factorial', function () {
 
-  function getStrings(city){
-    var map = new Map();
-    [...city.toLowerCase().replace(/[^a-z]/g, '')].forEach((v, i, a) => {
-      if(map.has(v)) {
-        var vv = map.get(v);
-        map.set(v, vv+'*');
-      } else {
-        map.set(v, '*');
-      }
-    });
-    var str = [];
-    map.forEach((v, k, m) => {
-      str.push(k+':'+v);
-    });
-    return str.join(',');
+  function factorial(n) {
+    if (n < 0 || n >12) { throw "Invalid argument"; }
+    return (n === 0) ? 1 : n*factorial(n-1);
   }
 
   it("Fixed Tests", () => {
-    assert.equal(getStrings("Chicago"), "c:**,h:*,i:*,a:*,g:*,o:*");
-    assert.equal(getStrings("Bangkok"), "b:*,a:*,n:*,g:*,k:**,o:*");
-    assert.equal(getStrings("Las Vegas"), "l:*,a:**,s:**,v:*,e:*,g:*");
-    assert.equal(getStrings("Ho Chi Minh City"), "h:***,o:*,c:**,i:***,m:*,n:*,t:*,y:*");
+    assert.equal(factorial(0), 1, "factorial for 0 is 1");
+    assert.equal(factorial(1), 1, "factorial for 1 is 1");
+    assert.equal(factorial(2), 2, "factorial for 2 is 2");
+    assert.equal(factorial(3), 6, "factorial for 3 is 6");
   });
 
 });
