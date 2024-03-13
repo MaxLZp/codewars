@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-describe('Kyu 7: Minimize Sum Of Array (Array Series #1) ', function () {
+describe('Kyu 7: Minimize Sum Of Array (Array Series #1)', function () {
 
   function minSum(arr) {
     return arr.sort((a,b) => (a-b))
