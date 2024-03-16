@@ -18,7 +18,7 @@ class Solution2Test extends TestCase
     public function solve($s) {
         $result = [0, 0, 0];
         for ($i=0; $i < count($result); $i++) {
-            $result[$i] = ($s / pow(3, $i)) % 3;
+            $result[$i] = (int)($s / pow(3, $i)) % 3;
         }
         return $result;
     }

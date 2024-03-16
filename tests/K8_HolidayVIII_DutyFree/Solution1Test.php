@@ -17,6 +17,6 @@ class Solution1Test extends TestCase
 
     public function solve(int $n, int $d, int $h): int
     {
-        return $h / ( $n * ($d/100));
+        return (int)($h / ( $n * ($d/100)));
     }
 }
