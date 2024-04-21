@@ -1,4 +1,6 @@
+
 # Piano Kata, Part 2
+
 ## 6 kyu
 
 
