@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\K6_PHPinAction2_HttpPostMethod_InputSanitizationsAndInputValidation;
+namespace tests\K6_PHPinAction3_HttpPostMethod_InputSanitizationsAndInputValidation;
 
 use PHPUnit\Framework\TestCase;
 
