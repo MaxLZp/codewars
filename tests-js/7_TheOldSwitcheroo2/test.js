@@ -2,7 +2,7 @@ const chai = require("chai");
 const assert = chai.assert;
 chai.config.truncateThreshold=0;
 
-describe("The old switcheroo 2",() =>{
+describe("git checkout ",() =>{
 
   it("Solution 1", () => {
 
