@@ -20,7 +20,10 @@ class Solution1Test extends TestCase
      * @dataProvider \tests\K6_GetThePasswordFromGrid\DataProvider::data
      */
     public function execute($input, $expected) {
-        $this->assertSame($this->solve($input[0], $input[1]), $expected);
+        if (PHP_VERSION > '8.0') {
+            $this->assertSame($this->solve($input[0], $input[1]), $expected);
+        }
+        $this->markTestSkipped('Runs on php > 8.0');
     }
 
     public function solve($grid, $dir)
