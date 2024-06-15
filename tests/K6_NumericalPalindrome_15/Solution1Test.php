@@ -15,7 +15,7 @@ class Solution1Test extends TestCase
         $this->assertSame($expected, $this->solve($input[0], $input[1]));
     }
 
-    public function solve($num, $s): array|string
+    public function solve($num, $s)
     {
         if (
             ! is_int($num)
