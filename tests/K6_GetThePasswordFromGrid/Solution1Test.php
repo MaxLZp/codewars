@@ -22,6 +22,7 @@ class Solution1Test extends TestCase
     public function execute($input, $expected) {
         if (PHP_VERSION > '8.0') {
             $this->assertSame($this->solve($input[0], $input[1]), $expected);
+            return;
         }
         $this->markTestSkipped('Runs on php > 8.0');
     }
