@@ -5,10 +5,10 @@ namespace tests\K6_TankTruck;
 use PHPUnit\Framework\TestCase;
 
 /**
- * 
+ *
  * Circular sector' s area
  * @link https://en.wikipedia.org/wiki/Circular_sector#Area
- * 
+ *
  * Heron’s formula for finding the area of a triangle in terms of the lengths of its sides.
  * @link https://www.britannica.com/science/Herons-formula
  */
@@ -29,10 +29,10 @@ class Solution1Test extends TestCase
         $l = $vt / (pi() * $R**2);
         if ($h >= $R) {
             $OA = $h - $R;
-            return $vt - $this->sectorVolume($R, $OA, $l)  + $this->triangleVolume($R, $OA, $l);
+            return intval($vt - $this->sectorVolume($R, $OA, $l) + $this->triangleVolume($R, $OA, $l));
         } else {
             $OA = $R - $h;
-            return $this->sectorVolume($R, $OA, $l) - $this->triangleVolume($R, $OA, $l);
+            return intval($this->sectorVolume($R, $OA, $l) - $this->triangleVolume($R, $OA, $l));
         }
     }
 
@@ -50,7 +50,7 @@ class Solution1Test extends TestCase
         // Heron’s formula
         $p = ($R + $R + $side3) / 2;
         $triangleSquare = sqrt($p*($p - $R)*($p - $R)*($p - $side3));
-        
+
         return $triangleSquare * $l;
     }
 }
