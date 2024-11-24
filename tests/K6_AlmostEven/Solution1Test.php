@@ -25,6 +25,12 @@ class Solution1Test extends TestCase
             array_fill(0, $parts - $rest, $val),
             array_fill(0, $rest, $val + 1)
         );
+
+        // or
+        // return [
+        //     ...array_fill(0, $parts - $rest, $val),
+        //     ...array_fill(0, $rest, $val + 1)
+        // ]
     }
 
 }
