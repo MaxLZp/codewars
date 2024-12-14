@@ -11,7 +11,7 @@ class Solution1Test extends TestCase
     /**
      * @test
      */
-    public function execute($input, $expected) {
+    public function execute() {
         $this->assertSame(12, $this->solve(1, 3));
     }
 

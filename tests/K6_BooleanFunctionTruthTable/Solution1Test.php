@@ -12,7 +12,6 @@ function  _XOR ($A, $B) { return $A XOR $B; }
 function  NOT ($A) { return !$A; }
 function  _TRUE ($A, $B, $C) { return TRUE; }
 function  _FALSE ($A, $B, $C, $D) { return FALSE; }
-$anonymous_function = fn ($A, $B, $C) => ($A AND $B) OR (! $C);
 
 class Solution1Test extends TestCase
 {
@@ -29,7 +28,8 @@ class Solution1Test extends TestCase
         $this->assertSame('A\t\ttests\K6_BooleanFunctionTruthTable\NOT(A)\n\n0\t\t1\n1\t\t0\n', $this->solve(__NAMESPACE__.'\\'.'NOT'));
         $this->assertSame('A B C D\t\ttests\K6_BooleanFunctionTruthTable\_FALSE(A,B,C,D)\n\n0 0 0 0\t\t0\n0 0 0 1\t\t0\n0 0 1 0\t\t0\n0 0 1 1\t\t0\n0 1 0 0\t\t0\n0 1 0 1\t\t0\n0 1 1 0\t\t0\n0 1 1 1\t\t0\n1 0 0 0\t\t0\n1 0 0 1\t\t0\n1 0 1 0\t\t0\n1 0 1 1\t\t0\n1 1 0 0\t\t0\n1 1 0 1\t\t0\n1 1 1 0\t\t0\n1 1 1 1\t\t0\n', $this->solve(__NAMESPACE__.'\\'.'_FALSE'));
         $this->assertSame('A B C\t\ttests\K6_BooleanFunctionTruthTable\_TRUE(A,B,C)\n\n0 0 0\t\t1\n0 0 1\t\t1\n0 1 0\t\t1\n0 1 1\t\t1\n1 0 0\t\t1\n1 0 1\t\t1\n1 1 0\t\t1\n1 1 1\t\t1\n', $this->solve(__NAMESPACE__.'\\'.'_TRUE'));
-        $this->assertSame('A B C\t\ttests\K6_BooleanFunctionTruthTable\f(A,B,C)\n\n0 0 0\t\t1\n0 0 1\t\t0\n0 1 0\t\t1\n0 1 1\t\t0\n1 0 0\t\t1\n1 0 1\t\t0\n1 1 0\t\t1\n1 1 1\t\t1\n', $this->solve($GLOBALS['anonymous_function']));
+        // $this->assertSame('A B C\t\ttests\K6_BooleanFunctionTruthTable\f(A,B,C)\n\n0 0 0\t\t1\n0 0 1\t\t0\n0 1 0\t\t1\n0 1 1\t\t0\n1 0 0\t\t1\n1 0 1\t\t0\n1 1 0\t\t1\n1 1 1\t\t1\n', $this->solve($GLOBALS['anonymous_function']));
+        $this->assertSame('A B C\t\ttests\K6_BooleanFunctionTruthTable\f(A,B,C)\n\n0 0 0\t\t1\n0 0 1\t\t0\n0 1 0\t\t1\n0 1 1\t\t0\n1 0 0\t\t1\n1 0 1\t\t0\n1 1 0\t\t1\n1 1 1\t\t1\n', $this->solve(fn ($A, $B, $C) => ($A AND $B) OR (! $C)));
 
     }
 
