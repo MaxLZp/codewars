@@ -21,7 +21,7 @@ describe('Kyu 7: The Four Seasons', function () {
     assert.strictEqual(fourSeasons(356),'Winter Season');
     assert.strictEqual(fourSeasons(400),'The year flew by!');
 
-    assert.strictEqual(fourSeasons(80),'Autumn Season');
+    assert.strictEqual(fourSeasons(80),'Spring Season');
   })
 
 });
