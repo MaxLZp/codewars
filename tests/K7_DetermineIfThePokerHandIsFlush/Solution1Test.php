@@ -17,7 +17,7 @@ class Solution1Test extends TestCase
     public function solve(array $cards): bool
     {
         for($i = 1, $max = count($cards); $i < $max; $i++) {
-            if (substr($cards[$i], -1) != substr($cards[$i-1], 1)) {
+            if (substr($cards[$i], -1) != substr($cards[$i-1], -1)) {
                 return false;
             }
         }
