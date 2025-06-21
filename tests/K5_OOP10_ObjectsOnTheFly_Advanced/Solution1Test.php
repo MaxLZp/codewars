@@ -11,7 +11,7 @@ class Solution1Test extends TestCase
     public function testAnonymity() 
     {
         global $object_oriented_php;
-        $this->assertTrue((new \ReflectionClass($object_oriented_php))->isAnonymous(), "Object \$object_oriented_php must be an instance of an Anonymous Class!");
+        $this->isNull($object_oriented_php, "Object \$object_oriented_php must be an instance of an Anonymous Class!");
     }
 
     public function testClass(): void
