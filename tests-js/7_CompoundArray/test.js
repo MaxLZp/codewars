@@ -1,24 +1,23 @@
-var assert = require('assert');
+const {assert} = require('chai');
 
-describe('Kyu 7: Composing squared strings', function () {
+describe('Kyu 7: Complete Series', function () {
 
-  it('solution1', function () {
-    function compose(s1, s2) {
-      const sa1 = s1.split('\n');
-      const sa2 = s2.split('\n');
-      let result = [];
-      for (let i = 0; i < sa1.length; i++) {
-        result.push(sa1[i].substring(0, i+1) + sa2[sa2.length-1-i].substring(0, sa2.length-i));
-      }
-      return result.join('\n');
+  function compoundArray(a, b) {
+    var result = [];
+    var min = Math.min(a.length, b.length);
+    for (let i = 0; i < min; i++) {
+      result.push(a[i], b[i]);
+    }
+    result.push(...a.slice(min), ...b.slice(min));
+
+    return result;
   }
 
-    assert.equal(compose("byGt\nhTts\nRTFF\nCnnI", "jIRl\nViBu\nrWOb\nNkTB"),
-            "bNkTB\nhTrWO\nRTFVi\nCnnIj");
-    assert.equal(compose("HXxA\nTGBf\nIPhg\nuUMD", "Hcbj\nqteH\nGbMJ\ngYPW"),
-            "HgYPW\nTGGbM\nIPhqt\nuUMDH");
-    assert.equal(compose("tSrJ\nOONy\nsqPF\nxMkB", "hLqw\nEZuh\nmYFl\nzlYf"),
-            "tzlYf\nOOmYF\nsqPEZ\nxMkBh");
+  it("Test 1", function() {
+    assert.deepEqual(compoundArray([11, 12], [21, 22, 23, 24]), [11, 21, 12, 22, 23, 24]);
+    assert.deepEqual(compoundArray([2147483647,2147483646,2147483645,2147483644,2147483643], [9]), [2147483647,9,2147483646,2147483645,2147483644,2147483643]);
+    assert.deepEqual(compoundArray([214,215,216,217,218], []), [214,215,216,217,218]);
+    assert.deepEqual(compoundArray([], [314,315,316,317,318]), [314,315,316,317,318]);
   });
 
 });
