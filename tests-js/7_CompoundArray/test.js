@@ -1,6 +1,6 @@
 const {assert} = require('chai');
 
-describe('Kyu 7: Complete Series', function () {
+describe('Kyu 7: Compound Array', function () {
 
   function compoundArray(a, b) {
     var result = [];
