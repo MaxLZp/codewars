@@ -7,3 +7,6 @@ composer.phar
 node_modules/
 /docker-compose/_logs
 .DS_Store
+.venv
+**/__pycache__/
+*.py[cod]
