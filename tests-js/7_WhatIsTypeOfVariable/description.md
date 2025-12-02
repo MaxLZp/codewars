@@ -1,0 +1,10 @@
+# What is type of variable?
+## 7 Kyu
+
+Create a function to return true type of variable, i.e.
+```
+type([]) == 'array'
+type({}) == 'object'
+type('') == 'string'
+type(NaN) == 'number'
+```
