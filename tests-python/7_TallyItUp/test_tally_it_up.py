@@ -1,5 +1,5 @@
 def score_to_tally(score):
-    result = 'e <br>' * score // 5
+    result = 'e <br>' * (score // 5)
     result += chr(ord('a') - 1 + score % 5) if score % 5 > 0 else ''
     return result
 
