@@ -1,36 +1,25 @@
 <?php
 
-/**
- * 5kyu RGB To Hex Conversion
- *
- * The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.
- *
- * Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
- *
- * The following are examples of expected output values:
- *
- * rgb(255, 255, 255); // returns FFFFFF
- * rgb(255, 255, 300); // returns FFFFFF
- * rgb(0, 0, 0); // returns 000000
- * rgb(148, 0, 211); // returns 9400D3
- */
-
-namespace tests;
+namespace tests\K5_RGBToHexConversion;
 
 use PHPUnit\Framework\TestCase;
 
-class RGB2HexConversionTest extends TestCase
+class Solution1Test extends TestCase
 {
 
-    /** @test */
-    public function testBaseTests()
-    {
-        $this->assertEquals("FFFFFF", $this->rgb(255, 255, 255));
-        $this->assertEquals("FFFFFF", $this->rgb(255, 255, 300));
-        $this->assertEquals("000000", $this->rgb(0, 0, 0));
-        $this->assertEquals("000000", $this->rgb(-500, 0, 0));
-        $this->assertEquals("9400D3", $this->rgb(148, 0, 211));
+    /**
+     * @test
+     * @dataProvider \tests\K5_RGBToHexConversion\DataProvider::data
+     */
+    public function execute($input, $expected) {
+        $this->assertSame($expected, $this->solve($input));
     }
+
+    public function solve($input): string
+    {
+        return $this->rgb(...$input);
+    }
+
 
     public function rgb($r, $g, $b)
     {
