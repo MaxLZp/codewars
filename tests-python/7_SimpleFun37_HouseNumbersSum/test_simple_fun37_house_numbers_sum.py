@@ -1,5 +1,9 @@
 def house_numbers_sum(inp):
-
+    result = 0
+    for num in inp:
+        if num == 0: return result
+        result += num
+    return result
 
 def test_simple_fun37_house_numbers_sum():
     tests = [
